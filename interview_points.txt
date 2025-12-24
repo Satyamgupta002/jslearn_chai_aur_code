@@ -1,5 +1,0 @@
---> iski files to dekhna hi h
---> datatypes ke bare me padhna
---> memory ke bare me 
---> String ki sari methods
---> nums and maths
