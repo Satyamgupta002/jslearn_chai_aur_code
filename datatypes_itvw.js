@@ -58,8 +58,8 @@ they are referencing to the same object
 if,
 userTwo.email = "state@gmail.com" # it will get changed in both the places as they are referencing to same object or memory space
 
-in short, Stack --> copy banata h
-Heap --> Reference deta h
+in short, Stack --> copy banata h, kewal reference store krta h values nhi
+Heap --> Reference deta h, aur values store krta h chahe vo primitive ho ya non-primitive
 
 
 
