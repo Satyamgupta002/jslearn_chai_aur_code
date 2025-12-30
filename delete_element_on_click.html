@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="fruits">
+        <li id="apple">Apple</li>
+        <li id="banana">Banana</li>
+        <li id="pear">Pear</li>
+        <li id="mango">Mango</li>
+        <li id="coconut">CocoNut</li>
+    </ul>
+    <script>
+        document.querySelector('#fruits').addEventListener('click',function (e){
+            let removeIt = document.getElementById(e.target.id)
+            removeIt.remove()
+        })
+    </script>
+</body>
+</html>

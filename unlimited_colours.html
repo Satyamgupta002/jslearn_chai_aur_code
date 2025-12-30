@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlimited Colours</title>
+</head>
+<body style="background-color: #414141;">
+    <h2 style="color: wheat;">Start will change the Background color every second</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <script>
+        let start
+
+        function randomHexColor() {
+            const hex = '0123456789ABCDEF'
+            let color = '#'
+            for(let i = 0; i<6; i++)
+            {
+                color += hex[Math.floor(Math.random() * 16)]
+            }
+            return color
+        }
+        // randomHexColor()
+        document.querySelector('#start').addEventListener('click',function(e){
+          if(!start){
+start = setInterval(function(){
+                //METHOD -1 : By rgb color
+                // const r = Math.floor(Math.random() * 256);
+                // const g = Math.floor(Math.random() * 256);
+                // const b = Math.floor(Math.random() * 256);
+                // document.body.style.backgroundColor = `rgb(${r},${g},${b})`
+
+                //METHOD-2: By hex color code
+                document.body.style.backgroundColor = randomHexColor()
+            },1000)
+          }  
+        })
+
+        document.querySelector('#stop').addEventListener('click',function(e){
+            clearInterval(start)
+            start=null
+        })
+    </script>
+</body>
+</html>

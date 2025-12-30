@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        requestUrl = 'https://api.github.com/users/Satyamgupta002'
+        const xhr = new XMLHttpRequest()
+        xhr.open('GET',requestUrl)
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState)
+            if(xhr.readyState===4){
+            const data = JSON.parse(this.responseText) // it is conv from string to json
+            console.log(data.name)
+        }
+        }
+        
+        xhr.send()
+    </script>
+</body>
+</html>

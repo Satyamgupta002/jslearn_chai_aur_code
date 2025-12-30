@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show the key</title>
+    <style>
+        #mainBox{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        #keyBox{
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;
+  background-color: wheat;
+        }
+
+        
+
+    </style>
+</head>
+<body style="background-color: #414141;">
+    <div id="mainBox">
+        <h2 style="color: wheat;">Press the Key</h2>
+        <div id="keyBox"><h1 id="key">b</h1></div>
+    </div>
+    <script>
+        addEventListener('keydown',function(e){
+            if(e.key.length==1 && e.key!=" "){
+                document.querySelector('#key').innerHTML = e.key
+            }
+        })
+    </script>
+</body>
+</html>
