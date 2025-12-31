@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click me</button>
+
+
+    <script>
+        //in this  code we will only get the reference or context of button not the react app in eventListner
+
+
+        // class React{
+        //     constructor(user,server){
+        //         this.user = user
+        //         this.server = server
+
+        //         document.querySelector('button').addEventListener('click',this.handleClick)
+        //     }
+
+        //     handleClick(){
+        //         console.log("button clicked")
+        //         console.log(this)
+        //     }
+        
+        // }
+
+        //here we will bind the context
+        class React{
+            constructor(user,server){
+                this.user = user
+                this.server = server
+
+                document.querySelector('button').addEventListener('click',this.handleClick.bind(this))
+            }
+
+            handleClick(){
+                console.log("button clicked")
+                console.log(this)
+            }
+        
+        }
+
+        const app1 = new React("satyam","http:localhost")
+
+        
+    </script>
+</body>
+
+</html>
