@@ -33,13 +33,22 @@
             constructor(user,server){
                 this.user = user
                 this.server = server
+                
 
+                //ye meri requirement h
+
+                //without bind method
+                // document.querySelector('button').addEventListener('click',this.handleClick)
+                
+                //without bind keyword this has the access of button not the react instance made by it , so to bind the context of current instance to handleclick 
+
+                //with bind
                 document.querySelector('button').addEventListener('click',this.handleClick.bind(this))
             }
 
             handleClick(){
                 console.log("button clicked")
-                console.log(this)
+                console.log(this.server)
             }
         
         }
